@@ -1,0 +1,41 @@
+<!-- 2b2t.xin主页，可以拿来给自己的客户端使用且无需授权！ -->
+<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
+                    Text="国庆新闻总集"
+                    LogoScale="1.02" Logo="M5.616 20q-.691 0-1.153-.462T4 18.384V5.616q0-.691.463-1.153T5.616 4h9.961L20 8.423v9.962q0 .69-.462 1.153T18.384 20zm0-1h12.769q.269 0 .442-.173t.173-.442V9h-4V5H5.616q-.27 0-.443.173T5 5.616v12.769q0 .269.173.442t.443.173M7.5 16h9v-1h-9zm0-7H12V8H7.5zm0 3.5h9v-1h-9zM5 5v4zv14z" />
+<local:MyCard Title="国庆前夕-op药漏洞出现" Margin="0,0,0,0" CanSwap="True" IsSwaped="True" >
+	<StackPanel Margin="25,40,23,15">
+	    <Image Height="120" HorizontalAlignment="Center" Source="https://www.helloimg.com/i/2024/10/02/66fd257fe0600.png" /> 
+		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0" FontSize="20" Foreground="#0000ff"
+                    Text="事件经过：" />
+		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0"
+                    Text="·国庆前夕，有一部分人发现违禁品插件损坏，随后将op药能喝进行广泛传播，导致xin服出现一刀999的惨状" />
+		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0" FontSize="20" Foreground="#0000ff"
+                    Text="事件结果：" />
+		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0"
+                    Text="·最终，服主山水紧急修复了此bug" />
+	</StackPanel>
+</local:MyCard>
+<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
+                    Text="xin组织"
+                    LogoScale="1.02" Logo="M12 12.385q-1.237 0-2.119-.882T9 9.385v-2.75q0-.473.325-.804q.326-.331.79-.331q.299 0 .54.137q.241.136.403.365q.161-.229.403-.365q.241-.137.539-.137t.54.137t.402.365q.162-.229.403-.365q.242-.137.53-.137q.48 0 .803.331q.322.33.322.803v2.75q0 1.238-.881 2.12t-2.119.88m0-1q.825 0 1.413-.587T14 9.385v-2.5h-4v2.5q0 .824.588 1.412t1.412.587m-7 7.193v-.608q0-.619.36-1.159q.361-.539.97-.837q1.416-.679 2.834-1.018q1.417-.34 2.836-.34t2.837.34t2.832 1.018q.61.298.97.837q.361.54.361 1.16v.607q0 .44-.299.74q-.299.298-.74.298H6.04q-.441 0-.74-.299t-.3-.739m1 .039h12v-.647q0-.332-.215-.625q-.214-.292-.593-.494q-1.234-.598-2.546-.916T12 15.616t-2.646.318t-2.546.916q-.38.202-.593.494Q6 17.637 6 17.97zm6-11.731" />
+<local:MyCard Title="组织介绍页" Margin="0,0,0,0" CanSwap="True" IsSwaped="True" >
+	<StackPanel Margin="25,40,23,15">
+		<local:MyListItem  Margin="-5,2,-5,8"
+		            Logo="https://www.helloimg.com/i/2024/10/02/66fd411e6ac8b.png" Title="生源救助站" Info="一个救助萌新的组织（"
+		            EventType="打开网页" EventData="https://qm.qq.com/q/apSgpQrkSk" Type="Clickable" />
+	</StackPanel>
+</local:MyCard>
+
+<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
+                    Text="xin工具"
+                    LogoScale="1.02" Logo="m7.73 14.596l2.38-3.327h4.884L7.731 5.562zm6.65 5.145q-.382.178-.764.033q-.383-.145-.562-.528L10.13 12.97l-1.94 2.693q-.349.484-.905.307t-.555-.767V5.166q0-.51.457-.728t.86.087l8.004 6.296q.46.367.26.908q-.199.54-.77.54h-3.546l2.879 6.144q.179.383.034.766q-.146.383-.528.562m-4.271-8.472" />
+<local:MyCard Title="快速进服" Margin="0,0,0,0" CanSwap="True" IsSwaped="True" >
+	<StackPanel Margin="25,40,23,15">
+	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
+                    Text="进入2b2t.xin" EventType="启动游戏" EventData="\current|2b2t.xin" ToolTip="启动！" />
+	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
+                    Text="进入小宋" EventType="启动游戏" EventData="\current|2b2tpvp.cn" ToolTip="启动！" />
+	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
+                    Text="进入台湾加速ip" EventType="启动游戏" EventData="\current|tw.2b2t.xin" ToolTip="启动！" />
+	</StackPanel>
+</local:MyCard>
