@@ -5,15 +5,6 @@
     </TextBlock>
     </local:MyCard>
 <local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="服务器状态"
-                    LogoScale="1.02" Logo="M6.5 19q-1.871 0-3.185-1.306Q2 16.39 2 14.517q0-1.719 1.175-3.051t2.921-1.431q.337-2.185 2.01-3.61T12 5q2.502 0 4.251 1.749T18 11v1h.616q1.436.046 2.41 1.055T22 15.5q0 1.471-1.014 2.486Q19.97 19 18.5 19zm0-1h12q1.05 0 1.775-.725T21 15.5t-.725-1.775T18.5 13H17v-2q0-2.075-1.463-3.538T12 6T8.463 7.463T7 11h-.5q-1.45 0-2.475 1.025T3 14.5t1.025 2.475T6.5 18m5.5-6" />
-
-<local:MyCard Title="服务器状态" Margin="0,0,0,15" CanSwap="False" IsSwaped="True">
-<Image Source="https://mcapi.us/server/image?ip=2b2t.xin&amp;port=25565" /> 
-</local:MyCard>
-		<local:MyButton Margin="0,4,0,10" Width="200" Height="35"
-                    Text="刷新信息" EventType="刷新主页" ToolTip="刷新服务器信息" />
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
                     Text="xin新闻"
                     LogoScale="1.02" Logo="M5.616 20q-.691 0-1.153-.462T4 18.384V5.616q0-.691.463-1.153T5.616 4h9.961L20 8.423v9.962q0 .69-.462 1.153T18.384 20zm0-1h12.769q.269 0 .442-.173t.173-.442V9h-4V5H5.616q-.27 0-.443.173T5 5.616v12.769q0 .269.173.442t.443.173M7.5 16h9v-1h-9zm0-7H12V8H7.5zm0 3.5h9v-1h-9zM5 5v4zv14z" />
 
@@ -23,11 +14,11 @@
 		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0" FontSize="20" Foreground="#0000ff"
                     Text="事件经过：" />
 		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0"
-                    Text="·国庆前夕，有一部分人发现违禁品插件损坏，随后将op药能喝进行广泛传播，导致xin服出现一刀999的惨状" />
+                    Text="▫ 国庆前夕，有一部分人发现违禁品插件损坏，随后将op药能喝进行广泛传播，导致xin服出现一刀999的惨状" />
 		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0" FontSize="20" Foreground="#0000ff"
                     Text="事件结果：" />
 		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0"
-                    Text="·最终，服主山水紧急修复了此bug" />
+                    Text="▫ 最终，服主山水紧急修复了此bug" />
 	</StackPanel>
 </local:MyCard>
 
