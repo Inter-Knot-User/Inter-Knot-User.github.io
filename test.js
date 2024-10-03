@@ -1,4 +1,3 @@
-<!-- 2b2t.xin主页，可以拿来给自己的客户端使用且无需授权！ -->
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
   })
@@ -6,106 +5,99 @@ addEventListener('fetch', event => {
   async function handleRequest(request) {
     const timezone = 'Asia/Shanghai';
   
-    const serverst = await fetch(' https://mcapi.us/server/status?ip=2b2t.xin ');
-    const serverdata = await serverst.json();
+    const dashboardResponse = await fetch('https://bd.bangbang93.com/openbmclapi/metric/dashboard');
+    const dashboardData = await dashboardResponse.json();
   
-    const online = serverdata.online;
-    const people = serverdata.players.now;
+    const sponsorResponse = await fetch('https://bmclapi2.bangbang93.com/openbmclapi/sponsor');
+    const sponsorData = await sponsorResponse.json();
   
-<local:MyCard Title="是否在线" Margin="0,0,2,4"
-    <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
-        <Run Text="${online}" FontSize="26"/>
-    </TextBlock>
-	
-<local:MyCard Title="XIN PAGE" Margin="0,0,0,5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-    <TextBlock Margin="25,12,20,10" HorizontalAlignment="Right">
-        beta version
-    </TextBlock>
+    const genTime = new Date().toLocaleString('zh-CN', { timeZone: timezone });
+    const load = (dashboardData.load * 100).toFixed(2);
+    const curNodes = dashboardData.currentNodes;
+    const curBandwidth = dashboardData.currentBandwidth.toFixed(2);
+    const todayData = (dashboardData.bytes / 1099511627776).toFixed(2);
+    const todayHit = dashboardData.hits;
+    const sponsorUrl = sponsorData.link;
+  
+    const xml = `
+<Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="0.8*" />
+        <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <local:MyCard Title="OpenBMCLAPI DashBoard" Margin="0,0,0,5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+        <TextBlock Margin="25,12,20,10" HorizontalAlignment="Right">
+            ${genTime} (UTC+8)
+        </TextBlock>
     </local:MyCard>
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="国庆新闻总集"
-                    LogoScale="1.02" Logo="M5.616 20q-.691 0-1.153-.462T4 18.384V5.616q0-.691.463-1.153T5.616 4h9.961L20 8.423v9.962q0 .69-.462 1.153T18.384 20zm0-1h12.769q.269 0 .442-.173t.173-.442V9h-4V5H5.616q-.27 0-.443.173T5 5.616v12.769q0 .269.173.442t.443.173M7.5 16h9v-1h-9zm0-7H12V8H7.5zm0 3.5h9v-1h-9zM5 5v4zv14z" />
 
-<local:MyCard Title="国庆前夕-op药漏洞出现" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
-	<StackPanel Margin="25,40,23,15">
-	    <Image Height="120" HorizontalAlignment="Center" Source="https://www.helloimg.com/i/2024/10/02/66fd257fe0600.png" /> 
-		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0" FontSize="20" Foreground="#0000ff"
-                    Text="事件经过：" />
-		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0"
-                    Text="·国庆前夕，有一部分人发现违禁品插件损坏，随后将op药能喝进行广泛传播，导致xin服出现一刀999的惨状" />
-		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0" FontSize="20" Foreground="#0000ff"
-                    Text="事件结果：" />
-		<TextBlock TextWrapping="Wrap" Margin="0,0,0,0"
-                    Text="·最终，服主山水紧急修复了此bug" />
-	</StackPanel>
-</local:MyCard>
+    <local:MyCard Title="在线节点" Margin="0,0,2,4" Grid.Row="1" Grid.Column="0">
+        <StackPanel Margin="25,40,23,15">
+            <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
+                <Run Text="${curNodes}" FontSize="26"/>
+                个
+            </TextBlock>
+        </StackPanel>
+    </local:MyCard>
 
-<Grid Margin="0,0,0,8">
-     <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="1*" />
-          <ColumnDefinition Width="80" />
-          <ColumnDefinition Width="1*" />
-     </Grid.ColumnDefinitions>
-     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
-          Stretch="Fill" Grid.Column="0" />
-     <TextBlock Text="以上为最新" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1"
-          VerticalAlignment="Center" HorizontalAlignment="Center" />
-     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
-          Stretch="Fill" Grid.Column="2" />
+    <local:MyCard Title="出网带宽" Margin="2,0,0,4" Grid.Row="1" Grid.Column="1">
+        <StackPanel Margin="25,40,23,15">
+            <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
+                <Run Text="${curBandwidth}" FontSize="26"/>
+                Mbps
+            </TextBlock>
+        </StackPanel>
+    </local:MyCard>
+
+    <local:MyCard Title="今日流量" Margin="0,0,2,4" Grid.Row="2" Grid.Column="0">
+        <StackPanel Margin="25,40,23,15">
+            <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
+                <Run Text="${todayData}" FontSize="26"/>
+                TiB
+            </TextBlock>
+        </StackPanel>
+    </local:MyCard>
+
+    <local:MyCard Title="今日请求数" Margin="2,0,0,4" Grid.Row="2" Grid.Column="1">
+        <StackPanel Margin="25,40,23,15">
+            <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
+                <Run Text="${todayHit}" FontSize="26"/>
+                次
+            </TextBlock>
+        </StackPanel>
+    </local:MyCard>
+
+     <local:MyCard Title="主控负载" Margin="0,0,0,4" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+        <StackPanel Margin="25,40,23,15">
+            <StackPanel Margin="0,0,0,4">
+                <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
+                    <Run Text="${load}" FontSize="26"/> %
+                </TextBlock>
+                <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
+                    （此处数据超过 100% 是正常现象）
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Margin="0,4,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <local:MyButton Margin="0,0,4,0" Width="180" Height="35" Text="刷新" EventType="刷新主页" ToolTip="重新加载数据，请勿频繁点击" />
+                <local:MyButton Margin="4,0,0,0" Width="180" Height="35" ColorType="Highlight" Text="查看赞助商信息" EventType="打开网页" EventData="${sponsorUrl}" ToolTip="查看来自 OpenBMCLAPI 赞助商的广告" />
+            </StackPanel>
+        </StackPanel>
+    </local:MyCard>
 </Grid>
-
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="xin组织"
-                    LogoScale="1.02" Logo="M12 12.385q-1.237 0-2.119-.882T9 9.385v-2.75q0-.473.325-.804q.326-.331.79-.331q.299 0 .54.137q.241.136.403.365q.161-.229.403-.365q.241-.137.539-.137t.54.137t.402.365q.162-.229.403-.365q.242-.137.53-.137q.48 0 .803.331q.322.33.322.803v2.75q0 1.238-.881 2.12t-2.119.88m0-1q.825 0 1.413-.587T14 9.385v-2.5h-4v2.5q0 .824.588 1.412t1.412.587m-7 7.193v-.608q0-.619.36-1.159q.361-.539.97-.837q1.416-.679 2.834-1.018q1.417-.34 2.836-.34t2.837.34t2.832 1.018q.61.298.97.837q.361.54.361 1.16v.607q0 .44-.299.74q-.299.298-.74.298H6.04q-.441 0-.74-.299t-.3-.739m1 .039h12v-.647q0-.332-.215-.625q-.214-.292-.593-.494q-1.234-.598-2.546-.916T12 15.616t-2.646.318t-2.546.916q-.38.202-.593.494Q6 17.637 6 17.97zm6-11.731" />
-
-<local:MyCard Title="组织介绍页" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
-	<StackPanel Margin="25,40,23,15">
-		<local:MyListItem  Margin="-5,2,-5,8"
-		            Logo="https://www.helloimg.com/i/2024/10/02/66fd411e6ac8b.png" Title="生源救助站" Info="一个救助萌新的组织（"
-		            EventType="打开网页" EventData="https://qm.qq.com/q/apSgpQrkSk" Type="Clickable" />
-	</StackPanel>
-</local:MyCard>
-
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="xin工具"
-                    LogoScale="1.02" Logo="m7.73 14.596l2.38-3.327h4.884L7.731 5.562zm6.65 5.145q-.382.178-.764.033q-.383-.145-.562-.528L10.13 12.97l-1.94 2.693q-.349.484-.905.307t-.555-.767V5.166q0-.51.457-.728t.86.087l8.004 6.296q.46.367.26.908q-.199.54-.77.54h-3.546l2.879 6.144q.179.383.034.766q-.146.383-.528.562m-4.271-8.472" />
-
-<local:MyCard Title="快速进服" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
-	<StackPanel Margin="25,40,23,15">
-	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
-                    Text="进入2b2t.xin" EventType="启动游戏" EventData="\current|2b2t.xin" ToolTip="启动！" />
-	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
-                    Text="进入小宋" EventType="启动游戏" EventData="\current|2b2tpvp.cn" ToolTip="启动！" />
-	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
-                    Text="进入台湾加速ip" EventType="启动游戏" EventData="\current|tw.2b2t.xin" ToolTip="启动！" />
-	</StackPanel>
-</local:MyCard>
-
-<local:MyCard Title="小工具" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
-	<StackPanel Margin="25,40,23,15">
-	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
-                    Text="内存优化" EventType="内存优化" EventData="\current|2b2t.xin" ToolTip="启动！" />
-	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
-                    Text="清理垃圾" EventType="清理垃圾" EventData="\current|2b2tpvp.cn" ToolTip="启动！" />
-	</StackPanel>
-</local:MyCard>
-
-
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="友情链接"
-                    LogoScale="1.02" Logo="M3 24q-.402 0-.701-.29Q2 23.422 2 23q0-.402.299-.701T3 22h18q.402 0 .701.29q.299.289.299.71q0 .402-.299.701T21 24zm11.004-11.711l-2.6-2.6l-3.885 3.884q-.173.173-.173.423t.173.423l1.748 1.754q.174.173.424.173t.422-.173zM12.117 8.98l2.595 2.594l4.538-4.533q.173-.173.173-.442t-.173-.442l-1.716-1.716q-.172-.173-.442-.173t-.442.173zm-1.061-.36l4.015 4.015l-4.244 4.25q-.485.485-1.134.485t-1.134-.485l-.192-.192l-.683.677q-.217.206-.513.331t-.608.125H5.417q-.273 0-.372-.252t.093-.444l1.839-1.833l-.154-.154q-.484-.485-.49-1.14t.479-1.139zm0 0l4.906-4.906q.484-.484 1.133-.484t1.134.484l1.754 1.748q.484.485.484 1.134q0 .65-.484 1.134l-4.912 4.906z" />
-
-<local:MyCard Title="论坛严选" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
-	<StackPanel Margin="25,40,23,15">
-		<local:MyListItem  Margin="-5,2,-5,8"
-		            Logo="https://s.namemc.com/i/38bb734fa98b4711.png" Title="｛长期更新｝【科学家整合】全xin服最全最安全的hack整合" Info="教程经验"
-		            EventType="打开网页" EventData="https://short-link.me/Lvpj" Type="Clickable" />
-	</StackPanel>
-</local:MyCard>
- <local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="鸣谢" ToolTip="感谢为本项目提供了技术支持的人"
-                    LogoScale="1.02"
-                    EventType="弹出窗口"
-                    EventData="鸣谢|还没有人qwq"
-                    Logo="M330.688 192c41.152 0 74.624 33.536 74.624 74.688V352a32 32 0 1 0 64.064 0V266.688a138.88 138.88 0 0 0-138.688-138.752 32 32 0 1 0 0 64.128z m225.792 279.232a32 32 0 0 1-22.656-54.72c23.808-23.808 50.752-22.656 66.816-22.016 13.888 0.64 15.424 0.128 18.816-3.2 3.328-3.392 3.84-4.928 3.2-18.752-0.64-16.064-1.92-43.008 21.952-66.816 23.808-23.808 50.752-22.656 66.816-22.016 13.888 0.64 15.424 0.128 18.816-3.2 3.392-3.456 3.84-4.992 3.328-18.944-0.64-16.064-1.792-43.008 22.08-66.816 23.808-23.872 50.752-22.72 66.816-22.08 13.952 0.576 15.488 0.064 18.88-3.328a32 32 0 0 1 45.312 45.312c-23.808 23.808-50.752 22.72-66.816 22.08-13.952-0.64-15.488-0.064-18.88 3.328-3.392 3.392-3.904 4.928-3.328 18.88 0.64 16.064 1.728 43.008-22.08 66.816s-50.752 22.72-66.816 22.016c-13.888-0.576-15.424-0.064-18.816 3.328-3.328 3.328-3.84 4.864-3.2 18.688 0.64 16.064 1.856 43.008-21.952 66.816-23.808 23.808-50.752 22.656-66.816 21.952-13.888-0.64-15.424-0.064-18.752 3.264a32 32 0 0 1-22.72 9.408zM512.64 208.896a31.808 31.808 0 0 0 13.632 20.48 32 32 0 0 0 46.08-11.584 36.096 36.096 0 0 0 3.2-8.896 31.616 31.616 0 0 0-13.696-32.896 27.648 27.648 0 0 0-8.448-3.968 31.68 31.68 0 0 0-37.568 15.552 35.712 35.712 0 0 0-3.2 8.832 31.104 31.104 0 0 0 0 12.48zM302.08 384.832c10.752-2.56 22.144 0.64 30.016 8.512l298.624 298.688a32 32 0 0 1-12.48 53.056l-448 149.312a32 32 0 0 1-40.576-40.512l149.312-448a32 32 0 0 1 23.04-21.12z m591.552 82.944a29.76 29.76 0 0 1 2.496 12.16 32.192 32.192 0 0 1-16.96 28.352A33.024 33.024 0 0 1 864 512a32.512 32.512 0 0 1-20.288-7.296 27.264 27.264 0 0 1-4.48-4.48 30.464 30.464 0 0 1-5.888-10.944 31.744 31.744 0 0 1 24.384-40.768 31.68 31.68 0 0 1 35.84 19.2z m-570.24 7.552l-112.64 337.984 337.984-112.64-225.28-225.28z m433.984 79.296H672a32 32 0 1 0 0 64.064h85.312c41.152 0 74.624 33.472 74.624 74.624a32 32 0 1 0 64.128 0 138.88 138.88 0 0 0-138.752-138.688z" />
-<!-- 你居然耐心看完了我的废物xaml，真的感谢🙏 -->
+    `;
+  
+    // 返回内容
+    return new Response(xml, {
+      headers: {
+        'Content-Type': 'text/html',
+        'Cache-Control': 'public, max-age=300',
+      },
+    });
+  }
