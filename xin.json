@@ -4,9 +4,32 @@
         beta version
     </TextBlock>
     </local:MyCard>
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="国庆新闻总集"
-                    LogoScale="1.02" Logo="M5.616 20q-.691 0-1.153-.462T4 18.384V5.616q0-.691.463-1.153T5.616 4h9.961L20 8.423v9.962q0 .69-.462 1.153T18.384 20zm0-1h12.769q.269 0 .442-.173t.173-.442V9h-4V5H5.616q-.27 0-.443.173T5 5.616v12.769q0 .269.173.442t.443.173M7.5 16h9v-1h-9zm0-7H12V8H7.5zm0 3.5h9v-1h-9zM5 5v4zv14z" />
+<StackPanel>
+  <StackPanel Margin="0,5,0,0">
+    <!--Animations Starts-->
+    <StackPanel.Triggers>
+    </StackPanel.Triggers>
+    <!--Animations Ends-->
+    <StackPanel.Resources>
+      <!--Template Starts-->
+      <!--Template Ends-->
+      <!--Styles Starts-->
+    </StackPanel.Resources>
+    <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+      <Grid Margin="10,0,0,0">
+
+
+<TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#FF000000">
+                📰 xin新闻
+</TextBlock>
+
+        <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#00000000">
+                📖 xin新闻
+    </TextBlock>
+      </Grid>
+    </Border>
+</StackPanel>
+</StackPanel>
 
 <local:MyCard Title="国庆前夕-op药漏洞出现" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
 	<StackPanel Margin="25,40,23,15">
@@ -36,9 +59,32 @@
           Stretch="Fill" Grid.Column="2" />
 </Grid>
 
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="xin组织"
-                    LogoScale="1.02" Logo="M12 12.385q-1.237 0-2.119-.882T9 9.385v-2.75q0-.473.325-.804q.326-.331.79-.331q.299 0 .54.137q.241.136.403.365q.161-.229.403-.365q.241-.137.539-.137t.54.137t.402.365q.162-.229.403-.365q.242-.137.53-.137q.48 0 .803.331q.322.33.322.803v2.75q0 1.238-.881 2.12t-2.119.88m0-1q.825 0 1.413-.587T14 9.385v-2.5h-4v2.5q0 .824.588 1.412t1.412.587m-7 7.193v-.608q0-.619.36-1.159q.361-.539.97-.837q1.416-.679 2.834-1.018q1.417-.34 2.836-.34t2.837.34t2.832 1.018q.61.298.97.837q.361.54.361 1.16v.607q0 .44-.299.74q-.299.298-.74.298H6.04q-.441 0-.74-.299t-.3-.739m1 .039h12v-.647q0-.332-.215-.625q-.214-.292-.593-.494q-1.234-.598-2.546-.916T12 15.616t-2.646.318t-2.546.916q-.38.202-.593.494Q6 17.637 6 17.97zm6-11.731" />
+<StackPanel>
+  <StackPanel Margin="0,5,0,0">
+    <!--Animations Starts-->
+    <StackPanel.Triggers>
+    </StackPanel.Triggers>
+    <!--Animations Ends-->
+    <StackPanel.Resources>
+      <!--Template Starts-->
+      <!--Template Ends-->
+      <!--Styles Starts-->
+    </StackPanel.Resources>
+    <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+      <Grid Margin="10,0,0,0">
+
+
+<TextBlock x:Name="org" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#FF000000">
+                🤝🏻 xin组织
+</TextBlock>
+
+        <TextBlock x:Name="org2" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#00000000">
+                🤝🏻 xin组织
+    </TextBlock>
+      </Grid>
+    </Border>
+</StackPanel>
+</StackPanel>
 
 <local:MyCard Title="组织介绍页" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
 	<StackPanel Margin="25,40,23,15">
@@ -48,9 +94,32 @@
 	</StackPanel>
 </local:MyCard>
 
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="xin工具"
-                    LogoScale="1.02" Logo="m7.73 14.596l2.38-3.327h4.884L7.731 5.562zm6.65 5.145q-.382.178-.764.033q-.383-.145-.562-.528L10.13 12.97l-1.94 2.693q-.349.484-.905.307t-.555-.767V5.166q0-.51.457-.728t.86.087l8.004 6.296q.46.367.26.908q-.199.54-.77.54h-3.546l2.879 6.144q.179.383.034.766q-.146.383-.528.562m-4.271-8.472" />
+<StackPanel>
+  <StackPanel Margin="0,5,0,0">
+    <!--Animations Starts-->
+    <StackPanel.Triggers>
+    </StackPanel.Triggers>
+    <!--Animations Ends-->
+    <StackPanel.Resources>
+      <!--Template Starts-->
+      <!--Template Ends-->
+      <!--Styles Starts-->
+    </StackPanel.Resources>
+    <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+      <Grid Margin="10,0,0,0">
+
+
+<TextBlock x:Name="tool" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#FF000000">
+                🛠 xin工具
+</TextBlock>
+
+        <TextBlock x:Name="tool2" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#00000000">
+                🛠 xin工具
+    </TextBlock>
+      </Grid>
+    </Border>
+</StackPanel>
+</StackPanel>
 
 <local:MyCard Title="快速进服" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
 	<StackPanel Margin="25,40,23,15">
@@ -73,10 +142,33 @@
 </local:MyCard>
 
 
-<local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="友情链接"
-                    LogoScale="1.02" Logo="M3 24q-.402 0-.701-.29Q2 23.422 2 23q0-.402.299-.701T3 22h18q.402 0 .701.29q.299.289.299.71q0 .402-.299.701T21 24zm11.004-11.711l-2.6-2.6l-3.885 3.884q-.173.173-.173.423t.173.423l1.748 1.754q.174.173.424.173t.422-.173zM12.117 8.98l2.595 2.594l4.538-4.533q.173-.173.173-.442t-.173-.442l-1.716-1.716q-.172-.173-.442-.173t-.442.173zm-1.061-.36l4.015 4.015l-4.244 4.25q-.485.485-1.134.485t-1.134-.485l-.192-.192l-.683.677q-.217.206-.513.331t-.608.125H5.417q-.273 0-.372-.252t.093-.444l1.839-1.833l-.154-.154q-.484-.485-.49-1.14t.479-1.139zm0 0l4.906-4.906q.484-.484 1.133-.484t1.134.484l1.754 1.748q.484.485.484 1.134q0 .65-.484 1.134l-4.912 4.906z" />
-					
+<StackPanel>
+  <StackPanel Margin="0,5,0,0">
+    <!--Animations Starts-->
+    <StackPanel.Triggers>
+    </StackPanel.Triggers>
+    <!--Animations Ends-->
+    <StackPanel.Resources>
+      <!--Template Starts-->
+      <!--Template Ends-->
+      <!--Styles Starts-->
+    </StackPanel.Resources>
+    <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+      <Grid Margin="10,0,0,0">
+
+
+<TextBlock x:Name="link" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#FF000000">
+                🖋 友情链接
+</TextBlock>
+
+        <TextBlock x:Name="link2" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#00000000">
+                🖋 友情链接
+    </TextBlock>
+      </Grid>
+    </Border>
+</StackPanel>
+</StackPanel>
+	
 <local:MyCard Title="论坛严选" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
 	<StackPanel Margin="25,40,23,15">
 		<local:MyListItem  Margin="-5,2,-5,8"
