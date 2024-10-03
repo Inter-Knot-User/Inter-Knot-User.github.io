@@ -21,6 +21,20 @@
 	</StackPanel>
 </local:MyCard>
 
+<Grid Margin="0,0,0,8">
+     <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="80" />
+          <ColumnDefinition Width="1*" />
+     </Grid.ColumnDefinitions>
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="0" />
+     <TextBlock Text="以上为最新" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1"
+          VerticalAlignment="Center" HorizontalAlignment="Center" />
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="2" />
+</Grid>
+
 <local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
                     Text="xin组织"
                     LogoScale="1.02" Logo="M12 12.385q-1.237 0-2.119-.882T9 9.385v-2.75q0-.473.325-.804q.326-.331.79-.331q.299 0 .54.137q.241.136.403.365q.161-.229.403-.365q.241-.137.539-.137t.54.137t.402.365q.162-.229.403-.365q.242-.137.53-.137q.48 0 .803.331q.322.33.322.803v2.75q0 1.238-.881 2.12t-2.119.88m0-1q.825 0 1.413-.587T14 9.385v-2.5h-4v2.5q0 .824.588 1.412t1.412.587m-7 7.193v-.608q0-.619.36-1.159q.361-.539.97-.837q1.416-.679 2.834-1.018q1.417-.34 2.836-.34t2.837.34t2.832 1.018q.61.298.97.837q.361.54.361 1.16v.607q0 .44-.299.74q-.299.298-.74.298H6.04q-.441 0-.74-.299t-.3-.739m1 .039h12v-.647q0-.332-.215-.625q-.214-.292-.593-.494q-1.234-.598-2.546-.916T12 15.616t-2.646.318t-2.546.916q-.38.202-.593.494Q6 17.637 6 17.97zm6-11.731" />
@@ -59,13 +73,13 @@
 
 
 <local:MyIconTextButton Margin="0,0,0,0" ColorType="Highlight"
-                    Text="论坛严选"
+                    Text="友情链接"
                     LogoScale="1.02" Logo="M3 24q-.402 0-.701-.29Q2 23.422 2 23q0-.402.299-.701T3 22h18q.402 0 .701.29q.299.289.299.71q0 .402-.299.701T21 24zm11.004-11.711l-2.6-2.6l-3.885 3.884q-.173.173-.173.423t.173.423l1.748 1.754q.174.173.424.173t.422-.173zM12.117 8.98l2.595 2.594l4.538-4.533q.173-.173.173-.442t-.173-.442l-1.716-1.716q-.172-.173-.442-.173t-.442.173zm-1.061-.36l4.015 4.015l-4.244 4.25q-.485.485-1.134.485t-1.134-.485l-.192-.192l-.683.677q-.217.206-.513.331t-.608.125H5.417q-.273 0-.372-.252t.093-.444l1.839-1.833l-.154-.154q-.484-.485-.49-1.14t.479-1.139zm0 0l4.906-4.906q.484-.484 1.133-.484t1.134.484l1.754 1.748q.484.485.484 1.134q0 .65-.484 1.134l-4.912 4.906z" />
 					
-<local:MyCard Title="论坛贴" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
+<local:MyCard Title="论坛严选" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
 	<StackPanel Margin="25,40,23,15">
 		<local:MyListItem  Margin="-5,2,-5,8"
 		            Logo="https://s.namemc.com/i/38bb734fa98b4711.png" Title="｛长期更新｝【科学家整合】全xin服最全最安全的hack整合" Info="教程经验"
 		            EventType="打开网页" EventData="https://short-link.me/Lvpj" Type="Clickable" />
 	</StackPanel>
-</local:MyCard>					
+</local:MyCard>
