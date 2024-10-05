@@ -1,0 +1,130 @@
+<StackPanel>
+  <StackPanel Margin="0,5,0,0">
+    <!--Animations Starts-->
+    <StackPanel.Triggers>
+    </StackPanel.Triggers>
+    <!--Animations Ends-->
+    <StackPanel.Resources>
+      <!--Template Starts-->
+      <!--Template Ends-->
+      <!--Styles Starts-->
+    </StackPanel.Resources>
+    <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+      <Grid Margin="10,0,0,0">
+<TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#FF000000">
+                📰 欢迎使用伊甸周报
+</TextBlock>
+        <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" FontFamily="Microsoft YaHei UI, 微软雅黑" VerticalAlignment="Center" Foreground="#00000000">
+                📖 欢迎使用伊甸周报
+    </TextBlock>
+      </Grid>
+    </Border>
+</StackPanel>
+</StackPanel>
+<Grid Margin="0,0,0,8">
+     <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="80" />
+          <ColumnDefinition Width="1*" />
+     </Grid.ColumnDefinitions>
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="0" />
+     <TextBlock Text="最新内容" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1"
+          VerticalAlignment="Center" HorizontalAlignment="Center" />
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="2" />
+</Grid>
+<local:MyCard Title="2024/10/04" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+    <TextBlock TextWrapping="Wrap" Margin="0,0,0,5" Foreground="{DynamicResource ColorBrush2}" FontSize="25" HorizontalAlignment="Center"
+                    Text="Eden组织再统一" />
+	<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    EDEN核心组于昨日下午17点-19点正式敲定eden重新统一并开始招人。本次商讨有蟹黄、asks、wazxdec三位核心人员参加，经过和谐友爱的商讨和核心群内人员的投票，最终全票通过此决定。" />
+	    <TextBlock TextWrapping="Wrap" Margin="0,0,0,5" Foreground="{DynamicResource ColorBrush2}" FontSize="25" HorizontalAlignment="Center"
+                    Text="蟹黄接过EDEN大旗" />
+	<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    10月4日20点，经过群内成员及蟹黄的友好协商。最终，蟹黄自愿继承EDEN政权，并成为新一任EDEN最高统治者。21点，蟹黄在qq语音中宣读了他的誓词并继任eden最高统治者" />
+	    <TextBlock TextWrapping="Wrap" Margin="0,0,0,5" Foreground="{DynamicResource ColorBrush2}" FontSize="25" HorizontalAlignment="Center"
+                    Text="万有引力组织与PF组织进行团战" />
+	<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    近日，万有引力组织和pf组织爆发冲突，下面是本台记者zhizi对两组织人员的采访。" />
+<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    万有引力组织首领破幕看看吧（308201478）表示本事件起因为万有引力组织的橘子独立并宣战，并创建电报组织加入CHE，拉过pf组织与万有引力组织发生冲突并在地狱发生团战。" />
+<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    在对pf组织首领花碎冰残（2043372190）的采访中印证了万有引力首领的发言，并表示其组织方面也不想参与团战，只是因为其位CEH联盟成员故参战" />
+<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    EDEN方面呼吁各方能够互相理解，尽早解除矛盾。如本事件后续有进展本报会对此持续进行报道" />
+	    <TextBlock TextWrapping="Wrap" Margin="0,0,0,5" Foreground="{DynamicResource ColorBrush2}" FontSize="25" HorizontalAlignment="Center"
+                    Text="Xin服再次惊现OP药" />
+	<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    OP药是一种特殊药水的简称，使用后能够大幅提升玩家的伤害和生命值。鉴于此，服务器管理员山水特地编写了一款插件，禁止玩家使用OP药" />
+<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    9月30日，有玩家突然发现OP药重新可以使用。消息一经传开，许多玩家开始从背包里取出他们珍藏已久的OP药，并迅速使用，导致局势迅速失控。" />
+<TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="15"
+    Text="    随着越来越多的玩家开始滥用OP药，服务器内的平衡被严重破坏。山水注意到事态的严重性，立即在10月1日中午采取紧急措施——他不仅将OP药设置为无法合成的物品，还清除了所有在线玩家的OP药效果。然而，仍有少数玩家的OP药效果尚未完全清除。" />
+	</StackPanel>
+</local:MyCard>
+<Grid Margin="0,0,0,8">
+     <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="80" />
+          <ColumnDefinition Width="1*" />
+     </Grid.ColumnDefinitions>
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="0" />
+     <TextBlock Text="历史内容" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1"
+          VerticalAlignment="Center" HorizontalAlignment="Center" />
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="2" />
+</Grid>
+<TextBlock TextWrapping="Wrap" Margin="0,0,0,10" Foreground="{DynamicResource ColorBrush2}" HorizontalAlignment="Center"
+                    Text="暂无" />
+<Grid Margin="0,0,0,8">
+     <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="80" />
+          <ColumnDefinition Width="1*" />
+     </Grid.ColumnDefinitions>
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="0" />
+     <TextBlock Text="小工具" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1"
+          VerticalAlignment="Center" HorizontalAlignment="Center" />
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="2" />
+</Grid>
+<local:MyCard Title="快速进服" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
+	<StackPanel Margin="25,40,23,15">
+	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
+                    Text="进入2b2t.xin" EventType="启动游戏" EventData="\current|2b2t.xin" ToolTip="启动！" />
+	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
+                    Text="进入小宋" EventType="启动游戏" EventData="\current|2b2tpvp.cn" ToolTip="启动！" />
+	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
+                    Text="进入台湾加速ip" EventType="启动游戏" EventData="\current|tw.2b2t.xin" ToolTip="启动！" />
+	</StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="小工具" Margin="0,0,0,15" CanSwap="True" IsSwaped="True" >
+	<StackPanel Margin="25,40,23,15">
+	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
+                    Text="内存优化" EventType="内存优化" EventData="\current|2b2t.xin" ToolTip="启动！" />
+	   		<local:MyButton Margin="0,4,0,10" Width="250" Height="35"
+                    Text="清理垃圾" EventType="清理垃圾" EventData="\current|2b2tpvp.cn" ToolTip="启动！" />
+	</StackPanel>
+</local:MyCard>
+<Grid Margin="0,0,0,8">
+     <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="80" />
+          <ColumnDefinition Width="1*" />
+     </Grid.ColumnDefinitions>
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="0" />
+     <TextBlock Text="投稿地址" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1"
+          VerticalAlignment="Center" HorizontalAlignment="Center" />
+     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5"
+          Stretch="Fill" Grid.Column="2" />
+</Grid>
+			<local:MyButton Margin="0,0,0,10" ColorType="Highlight" Width="250" Height="35"
+                        Text="点我投稿" EventType="打开网页" EventData="https://github.com/Inter-Knot-User/EDEN-PAGE/issues" />
+<TextBlock TextWrapping="Wrap" Margin="0,0,0,0" Foreground="{DynamicResource ColorBrush2}" HorizontalAlignment="Center"
+                    Text="©EDEN" />
